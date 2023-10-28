@@ -10,7 +10,7 @@ const HellMaterial = shaderMaterial(
     iResolution: new THREE.Color(1.0, 1.0, 1.0)
   },
 
-  // vertex shader (unchanged from your previous code)
+  // vertex shader
   /*glsl*/ `
     varying vec2 vUv;
     void main() {
@@ -66,11 +66,10 @@ const HellMaterial = shaderMaterial(
   `
 )
 
-// shaderMaterial creates a THREE.ShaderMaterial, and auto-creates uniform setter/getters
-// extend makes it available in JSX, in this case <HellMaterial />
 extend({ HellMaterial })
+
 export default function HellBG(props) {
-    const hellMaterial = useRef(new HellMaterial()); // Create an instance of the material
+    const hellMaterial = useRef(new HellMaterial());
 
     useFrame((state, delta) => {
         if (hellMaterial.current) {

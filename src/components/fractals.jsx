@@ -8,7 +8,9 @@ const FractalMaterial = shaderMaterial(
     {
         iTime: 0,
         iResolution: new THREE.Color(1.0, 1.0, 1.0)
-    },  // vertex shader
+    },  
+    
+    // vertex shader
     /*glsl*/ `
     varying vec2 vUv;
     void main() {
@@ -57,11 +59,10 @@ const FractalMaterial = shaderMaterial(
   `
 )
 
-// shaderMaterial creates a THREE.ShaderMaterial, and auto-creates uniform setter/getters
-// extend makes it available in JSX, in this case <FractalMaterial />
 extend({ FractalMaterial })
+
 export default function FractalBG(props) {
-    const fractalMaterial = useRef(new FractalMaterial()); // Create an instance of the material
+    const fractalMaterial = useRef(new FractalMaterial());
 
     useFrame((state, delta) => {
         if (fractalMaterial.current) {
