@@ -146,17 +146,22 @@ function Scene() {
       )}
 
       {scene === 0 ? (
-        <Text color='black' scale={0.5} position={[-6, 4, -10]}>
-            Click the light to start your nightmare...
-        </Text>
+        <>
+          <Text font='./Creepster-Regular.ttf' color='red' scale={2} position={[-3, 4, -10]}>
+            NIGHTMARE
+          </Text>
+          <Text color='black' scale={0.5} position={[-3, 2.7, -10]}>
+            Click the light to begin...
+          </Text>
+        </>
       ) : scene === 11 ? (
         <>
-<Text color='black' scale={0.5} position={[-6, 4, -10]}>
+          <Text color='black' scale={0.5} position={[-6, 4, -10]}>
             Thanks for experiencing my nightmare!...
-        </Text>
-        <Text color='black' scale={0.3} position={[-6, 3, -10]}>
+          </Text>
+          <Text color='black' scale={0.3} position={[-6, 3, -10]}>
             Built by JackJack. Find me at htts://jackjack.dev
-        </Text>
+          </Text>
         </>
       ) : <></>}
 
@@ -211,7 +216,7 @@ function Scene() {
 
       {scene === 5 ? (
         <>
-          <Image scale={1.5} url='./jeff.png'  />
+          <Image scale={1.5} url='./jeff.png' />
         </>
       ) : (
         <></>
@@ -219,7 +224,7 @@ function Scene() {
 
       {scene === 7 || scene === 8 ? (
         <>
-        <FractalBG scale={10} />
+          <FractalBG scale={10} />
         </>
       ) : (
         <></>
@@ -227,7 +232,7 @@ function Scene() {
 
       {scene === 10 ? (
         <>
-        <HellBG scale={10} />
+          <HellBG scale={10} />
         </>
       ) : (
         <></>
