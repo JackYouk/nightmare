@@ -150,17 +150,17 @@ function Scene() {
           <Text font='./Creepster-Regular.ttf' color='red' scale={2} position={[-3, 4, -10]}>
             NIGHTMARE
           </Text>
-          <Text color='black' scale={0.5} position={[-3, 2.7, -10]}>
-            Click the light to begin...
+          <Text font='./Creepster-Regular.ttf' color='black' scale={0.5} position={[-3, 2.7, -10]}>
+            Turn audio on. Click the light to begin...
           </Text>
         </>
       ) : scene === 11 ? (
         <>
-          <Text color='black' scale={0.5} position={[-6, 4, -10]}>
+          <Text font='./Creepster-Regular.ttf' color='black' scale={0.5} position={[-6, 4, -10]}>
             Thanks for experiencing my nightmare!...
           </Text>
-          <Text color='black' scale={0.3} position={[-6, 3, -10]}>
-            Built by JackJack. Find me at htts://jackjack.dev
+          <Text font='./Creepster-Regular.ttf' color='black' scale={0.3} position={[-6, 3, -10]}>
+            Built by JackJack. Find me at https://jackjack.dev
           </Text>
         </>
       ) : <></>}
